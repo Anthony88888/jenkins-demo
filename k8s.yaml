@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - image: curry91998/jenkins-demo:<BUILD_TAG>
-        imagePullPolicy: IfNotPresent
+#        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always  
         name: jenkins-demo
 #        env:
 #        - name: branch
