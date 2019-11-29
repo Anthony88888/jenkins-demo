@@ -1,7 +1,7 @@
 node('haimaxy-jnlp') {
     stage('Clone') {
         echo "1.Clone Stage"
-        git url: "https://github.com/Anthony88888/jenkins-demo.git"
+        git url: "https://github.com/cnych/jenkins-demo.git"
         script {
             build_tag = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
         }
@@ -11,13 +11,13 @@ node('haimaxy-jnlp') {
     }
     stage('Build') {
         echo "3.Build Docker Image Stage"
-        sh "docker build -t Anthony88888/jenkins-demo:${build_tag} ."
+        sh "docker build -t cnych/jenkins-demo:${build_tag} ."
     }
     stage('Push') {
         echo "4.Push Docker Image Stage"
         withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
             sh "docker login -u ${dockerHubUser} -p ${dockerHubPassword}"
-            sh "docker push Anthony88888/jenkins-demo:${build_tag}"
+            sh "docker push cnych/jenkins-demo:${build_tag}"
         }
     }
     stage('Deploy') {
