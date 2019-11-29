@@ -7,7 +7,7 @@ node('haimaxy-jnlp') {
         }
     }
     stage('Test') {
-        echo "2.Test Stage"
+      echo "2.Test Stage"
     }
     stage('Build') {
         echo "3.Build Docker Image Stage"
@@ -33,16 +33,16 @@ node('haimaxy-jnlp') {
                 ]
             ]
         )
-        echo "This is a deploy step to ${userInput.Env}"
+        echo "This is a deploy step to ${userInput}"
         sh "sed -i 's/<BUILD_TAG>/${build_tag}/' k8s.yaml"
         sh "sed -i 's/<BRANCH_NAME>/${env.BRANCH_NAME}/' k8s.yaml"
         if (userInput == "Dev") {
             // deploy dev stuff
-        }   else if (userInput == "QA"){
+        } else if (userInput == "QA"){
             // deploy qa stuff
-        }   else {
+        } else {
             // deploy prod stuff
-        }     
+        }
         sh "kubectl apply -f k8s.yaml"
     }
 }
