@@ -1,7 +1,7 @@
 node('haimaxy-jnlp') {
-    stage('Clone') {
-        echo "1.Clone Stage"
-        git url: "https://github.com/Anthony88888/jenkins-demo.git"
+    stage('Prepare') {
+        echo "1.Prepare Stage"
+        checkout scm
         script {
             build_tag = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
             if (env.BRANCH_NAME != 'master') {
