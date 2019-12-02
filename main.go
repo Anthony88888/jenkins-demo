@@ -10,7 +10,7 @@ import (
 func main() {
 <<<<<<< HEAD
 <<<<<<< HEAD
-	fmt.Println("Hello, Kubernetes！I'm from Jenkins CI！")
+	fmt.Println("Hello, Kubernete！I'm from Jenkins CI！")
 =======
 	fmt.Println("Hello, Kubernetes！I'm from Jenkins CI！")
 >>>>>>> dev
