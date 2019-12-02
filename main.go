@@ -8,19 +8,5 @@ import (
 )
 
 func main() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	fmt.Println("Hello, Kubernete！I'm from Jenkins CI！")
-=======
-	fmt.Println("Hello, Kubernete！I'm from Jenkins CI！")
-<<<<<<< HEAD
->>>>>>> dev
+	fmt.Println("Hello, Kubernetes！I'm from Jenkins CI！")
 	fmt.Println("BRANCH:", os.Getenv("branch"))
-=======
-	fmt.Println("Hello, Kubernete！I'm from Jenkins CI！")
-	fmt.Println("BRANCH:", os.Getenv("branch"))
->>>>>>> dev
-=======
-	fmt.Println("BRANCH:", os.Getenv("branch"))
->>>>>>> dev
-}
