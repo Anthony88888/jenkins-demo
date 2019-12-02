@@ -12,11 +12,15 @@ func main() {
 <<<<<<< HEAD
 	fmt.Println("Hello, Kubernete！I'm from Jenkins CI！")
 =======
-	fmt.Println("Hello, Kubernetes！I'm from Jenkins CI！")
+	fmt.Println("Hello, Kubernete！I'm from Jenkins CI！")
+<<<<<<< HEAD
 >>>>>>> dev
-	fmt.Println("BRANCH_NAME:", os.Getenv("branch"))
+	fmt.Println("BRANCH:", os.Getenv("branch"))
 =======
 	fmt.Println("Hello, Kubernete！I'm from Jenkins CI！")
-	fmt.Println("BRANCH_NAME:", os.Getenv("branch"))
+	fmt.Println("BRANCH:", os.Getenv("branch"))
+>>>>>>> dev
+=======
+	fmt.Println("BRANCH:", os.Getenv("branch"))
 >>>>>>> dev
 }
